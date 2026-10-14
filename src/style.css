@@ -9,9 +9,7 @@ body {
 #map {
   height: 75vh;
   border-radius: 12px;
-}
-
-#map {
+  position: relative;
   cursor: default;
 }
 
@@ -48,4 +46,18 @@ body {
 #filter-message {
   flex-basis: 100%;
   margin: 0;
+}
+
+.map-wrapper {
+  position: relative;
+}
+
+.map-note {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  margin: 0 0 4px;
+  color: white;
+  font-size: 13px;
+  white-space: nowrap;
 }
