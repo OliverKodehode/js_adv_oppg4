@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>geo-quiz</title>
+  </head>
+  <body>
+    <h1>Geography Quiz</h1>
+    <p id="progress"></p>
+    <p id="question"></p>
+    <p id="result"></p>
+    <button id="restart">Restart quiz</button>
+    <form id="filters">
+      <label>
+        <input id="capitals-only" type="checkbox" />
+        Capitals only
+      </label>
+
+      <label>
+        Country
+        <input
+          id="country-filter"
+          list="country-options"
+          placeholder="Type to search"
+          autocomplete="off"
+        />
+        <datalist id="country-options"></datalist>
+      </label>
+
+      <label>
+        Continent
+        <select id="continent-filter">
+          <option value="">All continents</option>
+          <option>Africa</option>
+          <option>Asia</option>
+          <option>Europe</option>
+          <option>North America</option>
+          <option>South America</option>
+          <option>Oceania</option>
+        </select>
+      </label>
+
+      <fieldset id="difficulty-buttons">
+        <legend>Difficulty - 1 easiest, 5 hardest</legend>
+        <button type="button" data-difficulty="1" aria-pressed="true">1</button>
+        <button type="button" data-difficulty="2" aria-pressed="true">2</button>
+        <button type="button" data-difficulty="3" aria-pressed="true">3</button>
+        <button type="button" data-difficulty="4" aria-pressed="true">4</button>
+        <button type="button" data-difficulty="5" aria-pressed="true">5</button>
+      </fieldset>
+
+      <button type="submit">Apply filters</button>
+      <p id="filter-message" role="status"></p>
+    </form>
+    <div id="map"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
